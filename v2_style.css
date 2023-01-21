@@ -1,0 +1,51 @@
+img{
+    height: 100%;
+    width: 100%;
+}
+
+.row{
+    
+    margin-bottom: 5px;   
+}
+.second-row, .third-row{
+    display: flex;
+    gap: 5px;
+}
+
+/* important thing to understand */
+.second-row > div{
+    flex: 1;
+}
+.sec-row-thi-cont{
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+}
+/* important */
+.sec-row-thi-cont div{
+    height: calc(50% - 5px/2);
+}
+/* important thing to understand */
+.third-row > div{
+    flex: 1;
+}
+
+.thi-row-sec-cont{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 5px;
+}
+
+@media screen and (max-width:576px){
+    .second-row, .third-row{
+        display: flex;
+        gap: 5px;
+        flex-direction: column;
+    }
+    
+    .thi-row-sec-cont{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 5px;
+    }   
+}
